@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1753434972592
+Build-Jdk-Spec: 21
+Bundle-Category: aem
+Bundle-Description: AEM Servlet to display environment variables
+Bundle-ManifestVersion: 2
+Bundle-Name: AEM Environment Variables Servlet
+Bundle-SymbolicName: environment-variables-servlet
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Export-Package: com.example.aem.servlet;uses:="javax.servlet,org.apache.
+ sling.api,org.apache.sling.api.servlets";version="1.0.0.SNAPSHOT"
+Import-Package: javax.servlet;version="[3.1,5)",org.apache.sling.api;ver
+ sion="[2.11,4)",org.apache.sling.api.servlets;version="[2.11,4)",org.sl
+ f4j;version="[1.7,2)",com.example.aem.servlet,java.io,java.lang,java.la
+ ng.invoke,java.util
+Provide-Capability: osgi.service;objectClass:List<String>="javax.servlet
+ .Servlet";uses:="javax.servlet"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compone
+ nt)(version>=1.5.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.ee=Ja
+ vaSE)(version=11))"
+Service-Component: OSGI-INF/com.example.aem.servlet.EnvironmentVariables
+ Servlet.xml
+Sling-Model-Packages: com.example.aem.servlet
+Tool: Bnd-6.3.1.202206071316
